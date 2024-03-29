@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio con Vue</title>
+    <link rel="stylesheet" href="./css/stuleVue.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    
+
+<div id="app">
+
+    <div>
+
+        <label for="valuta">Valuta da Convertire</label>
+        <input v-model="userInput" type="number" placeholder="inserisci un valore €">
+        <button @click="click()">invia</button>
+    </div>
+
+    <select name="valuta" id="valuta" v-model="currency">
+        <option selected value="dollari">dollari</option>
+        <option value="sterline">sterline</option>
+    </select>
+
+    <p>Valore Conversione: {{convert}} {{currency}}</p>
+
+</div>
+
+
+
+
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
